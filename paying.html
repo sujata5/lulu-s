@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lulu's Local Eatery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<style>
+        
+     h1 {
+	 
+	 text-align:center;
+        margin: 0;
+        font-family: Script, Helvetica, sans-serif;
+		font-size: 100px;
+		color: indigo;
+		padding-left: 40px;
+        padding-bottom: 0px;
+		position:relative;
+      }
+	  
+	  h2 {
+	      text-align:center;
+		  color: red;
+		  padding: 5px;
+	      font-size: 50px;
+		  font-weight: normal:
+		  padding-bottom: 0px;
+		  
+		  }
+	  
+	 
+	
+
+
+	.pingpong {
+                // font-family: Arial, Helvetica, sans-serif;
+	            font-size: 25px;
+	            color: white;
+				font-weight: bold;
+				margin-left: 50px;
+				padding-bottom:15px;
+			 }
+			 
+	
+  	
+
+	 
+	  ul {
+	 float:left;
+	 padding-left:200px;
+	 font-family: Arial, Helvetica, sans-serif;
+	 font-size: 50px;
+	 color: darkmagenta;
+	 
+	 
+     }
+
+   
+	
+	 
+     /* Add a black background color to the top navigation */
+      .topnav {
+      overflow: hidden;
+      background-color: #333;
+      }
+
+    /* Style the links inside the navigation bar */
+      .topnav a {
+
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 30px;
+	  
+      }
+
+     /* Change the color of links on hover */
+      .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+      }
+	  
+	  
+     /* Add a color to the active/current link */
+      .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+      }
+	  
+	  footer {
+      position:fixed;
+      bottom:0;
+      width:100%;
+      height:60px;   /* Height of the footer */
+      background:black;
+	  color:white;
+	  font-family: Arial, Helvetica, sans-serif;
+	  text-align:center;
+	  font-size: 50xp;
+     }
+
+
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0px;
+  margin: 50px auto 0 auto;
+  width: 100%;
+}
+    
+
+.trick {
+  visibility: hidden;
+
+}
+   
+.row {
+  
+  display: flex;
+  /*flex-wrap: wrap;*/
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+
+input[type=text] {
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}	  
+	  
+	  
+    </style>
+  </head>
+
+<body background="paying.jpg" onload="totalAmount()">
+
+  <header style="position:fixed;">
+    <div class="topnav">
+      <a href="home v.3.html">Home</a>
+      <a href="food.html">Food</a>
+      <a href="pingpongbar.html">Ping Pong Bar</a>
+      <a href="location.html">Location</a>
+      <a href="sustainability.html">Sustainability</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="active"  href="online.html">Online Orders</a>
+	  <a href="https://www.facebook.com/Lulus-Local-Eatery-132285260224330/" title="Follow Lulu's Local Eatery on Facebook" alt="Facebook icon">Facebook <i class="fa fa-facebook-square"></i></a>
+	  <a href="https://www.instagram.com/luluslocaleatery/" title="Follow Lulu's Local Eatery on Instagram" alt="Instagram icon"> Instagram <i class="fa fa-instagram"></i></a>
+	  <a href="#"><div class="trick">Carlos Cuenca Canal 2019</div></a>
+    </div>
+	
+	<br>
+ 
+  <h1><img src="logo.png" align="left-side" height="92" width="84"/><b> Lulu's Local Eatery</b></h1>
+		
+        
+  </header>
+
+
+
+	  
+	  <main>
+	    <br><br>
+		
+		
+		
+		<div class="content">
+		
+         <div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Carlos Cuenca" required="required">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="ccuenca@ussenterprise.com" required="required">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="77 Sunset Street" required="required">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Chesterfield" required="required">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="MO" required="required" maxlength="2">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="63017" required="required">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="Carlos A. Cuenca Canal" required="required">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required="required">
+            <label for="expmonth">Exp Month</label> 
+            <input type="text" id="expmonth" name="expmonth" placeholder="December" required="required"> 
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2020" required="required" maxlength="4">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="765" required="required" maxlength="3">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+		<input type="submit" value="MAKE  PAYMENT" class="btn" onclick="readingInput()">
+      </form>
+    </div>
+  </div>
+
+  <div class="col-25">
+    <div class="container">
+      
+	  <table border="1" width ="80%" align="center">
+	  <tr><td  align="center" style="font-size:30px; padding: 10px;"><p id="amount" style="color:blue;"></p></td></tr>
+	  <tr><td  style="padding: 10px;" align="center"> <button style="font-size:20px; color: white; background-color: green;" type="button" onclick="goingBack()">Review Your Order</button> </td></tr>
+	  <tr><td  style="padding: 10px;"align="center"> <button style="font-size:20px; color: white; background-color: green;" type="button" onclick="history.go(-1)" >Edit Order</button> </td></tr>
+	  
+	  </table>
+	  
+	  
+    </div>
+  </div>
+</div> 
+    
+		</div>
+		
+      </main> 
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+<script type="text/javascript">
+
+
+
+    function totalAmount() {
+	
+	var t = localStorage.getItem("money");
+	document.getElementById("amount").innerHTML = "Total: $" + t;
+
+	}
+
+    function goingBack() {	
+		
+	var nci = localStorage.getItem("nItems");
+	var subT = localStorage.getItem("sTotal");
+	var t = localStorage.getItem("money");
+	var oD = JSON.parse(localStorage.getItem("dishes"));
+	var oP = JSON.parse(localStorage.getItem("prices"));
+	var oQ = JSON.parse(localStorage.getItem("quantity"));
+	var oS = JSON.parse(localStorage.getItem("subtotals"));
+	
+	
+	
+document.write("<body background=\"confirmation.jpg\">");
+
+document.write("<h1 style=\"text-align:center;font-family: Script, Helvetica, sans-serif; font-size: 100px; color: navy;\"><img src=\"logo.png\" align=\"left-side\" height=\"92\" width=\"84\"/> Lulu's Local Eatery</h1>");
+document.write("<h1 style=\"text-align:center; font-size:50px; color: yellow;\">Your Order<h1>");
+document.write("<table border=\"1\" align = \"center\" cellpadding=\"10px\" style=\"font-size: 25px; color: white; background-color: black;\">");
+document.write("<th>Name of the Dish</th><th>Price</th><th>Qty.</th><th>Subtotal</th>");
+
+    for(var i = 0; i < nci; i++) {
+	document.write("<tr><td>");
+	document.write(oD[i]);
+	document.write("</td><td align=\"right\">$");
+	document.write(oP[i]);
+	document.write("</td><td align=\"center\">");
+	document.write(oQ[i]);
+	document.write("</td><td align=\"right\">$");
+	document.write(oS[i].toFixed(2));
+	document.write("</td></tr>");
+	
+     
+    }
+
+
+document.write("</table>");
+document.write("<br>");
+document.write("<table border=\"1\" align = \"center\" cellpadding=\"10px\" style=\"font-size: 25px; color: black; background-color: yellow;\">");
+document.write("<tr><td align=\"right\";>Subtotal:  $");
+document.write(subT);
+document.write("</td><td width=\"40px\"><button style=\"background-color: #4CAF50\" onclick=\"history.go(0)\"><b>EDIT YOUR ORDER</b></button>");
+document.write("</td><td width=\"40px\"><button style=\"background-color: #008CBA\" onclick=\"window.location.href = 'home v.3.html';\"><b>HOME PAGE</b></button>");
+document.write("</td></tr>"); 
+document.write("<tr><td>ORDER TOTAL ( + 8.5% tax):  $");
+document.write(t);
+document.write("</td><td colspan=\"2\"><button style=\"background-color: #f44336\" onclick=\"window.location.href = 'paying.html';\"><b>PAY FOR YOUR ORDER</b></button>");
+document.write("</td></tr>");
+document.write("</table>");
+
+
+
+	
+	}// End of function
+	
+	
+	
+	function readingInput() { 
+	
+	
+	// Captures the data from the form
+	na = document.getElementById("fname").value;// full name	
+	em = document.getElementById("email").value; // email address	
+	ad = document.getElementById("adr").value; // Physical address		
+	ci = document.getElementById("city").value; // City
+	st = document.getElementById("state").value; // State
+	zi = document.getElementById("zip").value; // Zip
+	nc = document.getElementById("cname").value; // Name on card	
+	cc = document.getElementById("ccnum").value; // Credit card number
+	exm = document.getElementById("expmonth").value; // Expiracy month
+	exy = document.getElementById("expyear").value; // Expiracy year
+	sc = document.getElementById("cvv").value; // Security Code
+	
+  
+	// Stores the data from the form so that it can be used on other pages
+	localStorage.setItem("na1", na);
+	localStorage.setItem("em1", em);
+	localStorage.setItem("ad1", ad);
+	localStorage.setItem("ci1", ci);
+	localStorage.setItem("st1", st);
+	localStorage.setItem("zi1", zi);
+	localStorage.setItem("nc1", nc);
+	localStorage.setItem("cc1", cc);
+	localStorage.setItem("exm1", exm);
+	localStorage.setItem("exy1", exy);
+	localStorage.setItem("cv1", sc); 
+	
+  // window.open("thankyou.html");
+	
+	validation();
+	
+	} // End of InputProcessing method
+	
+	
+	var isValidState = true;
+	var isValidCard = true;
+	var isValidMonth = true;
+	var isValidYear = true;
+	
+	function validation() {
+	    var x, y, z;
+	
+	    x = stateValidation();
+	    y = cardValidation();
+		z = monthValidation();
+		w = yearValidation();
+		
+	    if(x === true && y === true && z === true && w === true) {
+	        window.open("thankyou.html");
+	    }
+	
+	} // End of validation
+				
+	 
+	 function stateValidation() {
+	 
+	    var states = ["AL","AK","AZ","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO",
+	                 "MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AS","DC",
+	                 "FM","GU","MH","MP","PW","PR","VI","AA","AE","AP"];
+					 
+			var letter1 = st.charCodeAt(0);
+            var letter2 = st.charCodeAt(1);	
+			
+			if (st.length === 1) {
+			   isValidState = false;
+			   alert("Your input is invalid because it has only 1 character. The STATE abbrevation must be made up of TWO UPPER CASE LETTERS. Try again.");
+			   
+			} else if (letter1 < 65 || letter1 > 90 || letter2 < 65 || letter2 > 90) { // Check for upper case letters.
+			   isValidState = false;
+			   alert("Your input contains invlid characters! The STATE abbrevation must be made up of TWO UPPER CASE LETTERS. Try again.");
+			   
+			} else {
+			    var check = 0;
+	            for(var i = 0; i <= 61; i++) {	       
+			       if (states[i] == st ) {
+			          //alert("Good input!");
+			          i = 61;
+			          check = 1;
+			       }  
+			
+		        }// End of for	
+        
+                if(check === 0 & st !="") {
+                    isValidState = false;
+                    alert("Your input is wrong! This is not a valid abbreviation for a U.S. State. Try again.");
+		
+                }
+				
+		    }
+
+        return isValidState;			
+	 
+	 }// End of stateValidation
+	 
+	 
+	 
+	function cardValidation() {
+	
+	var creditCard = new Array(cc.length);
+	var formula = new Array(cc.length);
+	
+	if(cc.length < 19) {
+	   isValidCard = false;
+	   alert("Your input is wrong! The credit card number must have 16 digits and 3 hyphens. \n\nThis is the format: 1111-2222-3333-4444.  Try again.");
+	} else {
+	    
+	    
+		
+		for(var i = 0; i < cc.length; i ++) {
+		    creditCard[i] = cc.charAt(i);			
+	    } // The array contains all the characters of the string.
+		
+		var digit = 0;
+		
+		for(var i = 0;  i < cc.length; i++) {
+		 
+		    if( (i === 4 || i === 9 || i === 14) && creditCard[i] != "-") {
+			    isValidCard = false;
+			    alert("Your input is wrong! The character [ " + creditCard[i] + " ] IS NOT A HYPHEN. \n\nYour input should have 3 HYPHENS in the right places. Try again.");
+		    } else if (i != 4 && i != 9 && i != 14) {
+			 
+			    digit = parseInt(creditCard[i]);
+			    // alert(digit);
+			    if (isNaN(digit)) {
+				  isValidCard = false;
+			      alert("Your input is wrong! " + " The character  [ " + creditCard[i] + " ]  is NOT A VALID DIGIT. \n\nTry again!");
+			    }
+			
+			}
+		} // This part checks to confirm that the characters are digits or hyphens in the right places.
+		
+	
+       for(var i = 0; i < cc.length; i++) {
+          if(creditCard[i] != "-") {
+              formula[i] = parseInt(creditCard[i]);
+          } else {
+              formula[i] = 0;
+          }		  
+	      
+       } // This for loop fills the formula array. 
+	  
+	
+	   for(var i = 0; i < cc.length; i++) {
+	
+	       if(i === 0 || i === 2 || i === 5 || i === 7 || i === 10 || i ===12 || i === 15 || i === 17) {
+           
+		      formula[i] = formula[i] * 2;
+		   
+           } 	   	
+	       
+	   }// This part multiplies specific digits by 2
+	   
+	   
+	var s = "";
+	var d1 = 0;
+	var d2 = 0;
+	var dsum = 0;
+	
+	   for(var i = 0; i < cc.length; i++) {
+	    
+	       if((i === 0 || i === 2 || i === 5 || i === 7 || i === 10 || i ===12 || i === 15 || i === 17) && formula[i] > 9){
+
+               s = formula[i].toString();
+		       d1 = parseInt(s.charAt(0));
+               d2 = parseInt(s.charAt(1));
+               dsum = d1 + d2;
+		       formula[i] = dsum;
+		    
+           } 	   	
+	
+	    }// This part the two digit numbers
+	  
+	  
+	  
+	var ss = "";
+	var sum = 0;
+	keyDigit = 0;
+	
+	    for(var i = 0; i <cc.length; i++) {
+	        
+	        sum = sum + formula[i];   
+	        
+	    }
+		
+ 
+    ss = sum.toString();
+
+    keyDigit = parseInt(ss.charAt(ss.length - 1));
+	
+	if(keyDigit != 0) {
+	    isValidCard = false;
+		alert("The CREDIT CARD NUMBER you provided IS INVALID. Try again!");
+	}
+
+    	
+		
+		
+	} // End of else
+	
+	return isValidCard;
+	
+	} // End of cardValidation
+	
+	
+	
+	function monthValidation() {
+	
+	var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+	var checkMonth = 0;
+	    
+	    for(var i = 0; i < 12; i++) {
+		
+		   if(exm === months[i]) {
+		       checkMonth = 1;
+		   }
+		
+		} // End of for
+		
+		if(checkMonth === 0) {
+		
+		    alert("Your input [ " + exm + " ] is NOT A VALID MONTH OF THE YEAR. \n\nCheck your spelling and try again!");
+			isValidMonth = false;
+	    }
+		
+		return isValidMonth;
+			
+	} // End of monthValidation
+	
+	
+	function yearValidation() {
+	
+	    year = parseInt(exy);
+
+	    if(year < 2019 || year > 2030) {
+	    
+		    isValidYear = false;
+	        alert("The input [ " + exy + " ] IS NOT A VALID YEAR. \n\nThe input must be a year between 2019 and 2030 (inclusive)");
+	
+	}
+	
+	    return isValidYear;
+	
+	}
+
+</script>
+
+	  
+</body>
+
+<footer>
+  <br>3201 S Grand Ave St. Louis, MO 63118  &nbsp;&nbsp;  //  &nbsp;&nbsp;    
+314-300-8215 &nbsp;&nbsp; // &nbsp;&nbsp;  Monday - Saturday 11:30am-9pm
+
+</footer>
+
+</html>

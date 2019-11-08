@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lulu's Local Eatery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="online.js" type="text/javascript"></script>
+	
+	
+	<style>
+        
+     h1 {
+	 
+	 text-align:center;
+        margin: 0;
+        font-family: Script, Helvetica, sans-serif;
+		font-size: 100px;
+		color: navy;
+		padding-left: 40px;
+        padding-bottom: 0px;
+		position:relative;
+      }
+	  
+	  h2 {
+	      text-align:center;
+		  color: black;
+		  padding: 5px;
+	      font-size: 50px;
+		  padding-bottom: 0px;
+		  
+		  }
+	  
+	 
+	
+			 
+	
+  	
+
+	 
+	  ul {
+	 float:left;
+	 padding-left:200px;
+	 font-family: Arial, Helvetica, sans-serif;
+	 font-size: 50px;
+	 color: darkmagenta;
+	 
+	 
+    
+	 
+	 } 
+	
+	 
+     /* Add a black background color to the top navigation */
+      .topnav {
+      overflow: hidden;
+      background-color: #333;
+      }
+
+    /* Style the links inside the navigation bar */
+      .topnav a {
+
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 30px;
+	  
+      }
+
+     /* Change the color of links on hover */
+      .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+      }
+	  
+	  
+     /* Add a color to the active/current link */
+      .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+      }
+	  
+	  footer {
+      position:fixed;
+      bottom:0;
+      width:100%;
+      height:60px;   /* Height of the footer */
+      background:black;
+	  color:white;
+	  font-family: Arial, Helvetica, sans-serif;
+	  text-align:center;
+	  
+     }
+
+
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0px;
+  margin: 50px auto 0 auto;
+  width: 100%;
+}
+    
+
+.trick {
+  visibility: hidden;
+
+}
+   
+th {
+
+font-size: 30px;
+color: white;
+
+}	
+
+td {
+
+font-size: 20px;
+color: white;
+
+} 
+
+table {
+
+background-color: black;
+} 
+	  
+	  
+    </style>
+  </head>
+
+<body background="online.jpg" onload="totalAmount()">
+
+  <header style="position:fixed;">
+    <div class="topnav">
+      <a href="home v.3.html">Home</a>
+      <a href="food.html">Food</a>
+      <a href="pingpongbar.html">Ping Pong Bar</a>
+      <a href="location.html">Location</a>
+      <a href="sustainability.html">Sustainability</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="active" href="online.html">Online Orders</a>
+	  <a href="https://www.facebook.com/Lulus-Local-Eatery-132285260224330/" title="Follow Lulu's Local Eatery on Facebook" alt="Facebook icon">Facebook <i class="fa fa-facebook-square"></i></a>
+	  <a href="https://www.instagram.com/luluslocaleatery/" title="Follow Lulu's Local Eatery on Instagram" alt="Instagram icon"> Instagram <i class="fa fa-instagram"></i></a>
+	  <a href="#"><div class="trick">Carlos Cuenca Canal 2019</div></a>
+    </div>
+	
+	<br>
+ 
+  <h1><img src="logo.png" align="left-side" height="92" width="84"/> Lulu's Local Eatery</h1>
+		
+        
+  </header>
+
+
+
+	  
+	  <main>
+	    <br><br><br><br><br>
+		
+		
+		
+		<div class="content">
+
+
+
+
+	
+	<table class="starters" border="1" cellspacing="10" cellpadding="10" align="center">
+	<h2 align="center">Starters, Salads, and Sides</h2>
+        <th>Photo</th>
+        <th>Dish</th>		
+        <th width="400">Description</th>
+        <th>Price</th>
+        <th>Selector</th>
+        <th>Quantity</th>
+		
+	  
+      <tr>
+        <td><img src="Buffalo Cauliflower Bites.jpg" align="center" height="68" width="116"></td>
+		<td>BUFFALO CAULIFLOWER BITES</td>
+	    <td>with ranch clipping sauce</td>
+	    <td>$6.95</td>
+	    <td align="center"><input id="01a" type="checkbox" name="dish"</td>
+		<td align="center"><input id="01aa" type="number" min="0"/></td>
+	  </tr>
+	  
+	   <tr>
+		    <td><img src="Kale Salad.jpg" align="center" height="68" width="116"/></td>
+		    <td>KALE SALAD</td>
+		    <td>with cranberries, sunflower seeds, shredded carrot and house-made maple mustard vinaigrette </td>
+		    <td>$6.95</td>
+		    <td align="center"><input id="02a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="02aa" type="number" min="0"/></td>
+	  </tr>	 
+	    
+		
+		<tr>
+		    <td><img src="Tater Tots.jpg" align="center" height="80" width="100"/></td>
+		    <td>TATER TOTS</td>
+		    <td>with cajun seasoning and spicy chipotle dipping sauce</td>
+		    <td>$3.95</td>
+		    <td align="center"><input id="03a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="03aa" type="number" min="0"/></td>
+	  </tr>	
+	    
+		  
+		<tr>
+		    <td><img src="Smoked White Bean Humus.jpg" align="center" height="78" width="116"/></td>
+		    <td>SMOKED WHITE BEAN HUMMUS</td>
+		    <td>with grilled pita and cucumbe</td>
+		    <td>$6.95</td>
+		    <td align="center"><input id="04a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="04aa" type="number" min="0"/></td>
+	  </tr>
+	    
+		
+		<tr>
+		    <td><img src="Thai Crunched Salad.jpg" align="center" height="78" width="116"/></td>
+		    <td>THAI CRUNCHED SALAD</td>
+		    <td>shredded kale tossed in our house-made thai peanut dressing, shredded carrot, red cabbage, cucumber, green onion, red pepper, radish, crushed peanuts, lime, mint and basil (add avocado and/or organic marinated tofu for $1 more)</td>
+		    <td>$8.95</td>
+		    <td align="center"><input id="05a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="05aa" type="number" min="0"/></td>	
+	    </tr>
+		 
+		<tr>
+		    <td><img src="Poke Lettuce Wraps.jpg" align="center" height="78" width="116"/></td>
+		    <td>POKE LETTUCE WRAPS</td>
+		    <td>lettuce cups stuffed with sushi rice, watermelon poke, cucumber, radish, avocado and scallions topped with spicy mayo and black sesame seeds</td>
+		    <td>$9.95</td>
+		    <td align="center"><input id="06a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="06aa" type="number" min="0"/></td>
+	  </tr>		
+	  
+	  
+	</table>
+	<br><br><br>
+	
+	
+    <table class="burgers" border="1" cellspacing="10" cellpadding="10" align="center">
+	<h2 align="center">Burgers & Wraps</h2>
+	
+	<th>Photo</th>
+        <th>Dish</th>		
+        <th width="400">Description</th>
+        <th>Price</th>
+        <th>Selector</th>
+        <th>Number</th>
+		
+	<tr>
+		    <td><img src="The BBQ Jack.jpg" align="center" height="68" width="116"/></td>
+		    <td>THE BBQ JACK</td>
+		    <td>slow smoked jackfruit smothered in Pappy’s Original BBQ Sauce on a pretzel bun topped with house-made slaw</td>
+		    <td>$7.95</td>
+		    <td align="center"><input id="07a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="07aa" type="number" min="0"/></td>
+		    		
+	    </tr>
+		
+        <tr>
+		    <td><img src="Sweet Potato Falafel.jpg" align="center" height="68" width="116"/></td>
+		    <td>SWEET POTATO FALAFEL</td>
+		    <td>our version of the mediterranean sandwich. house-made crispy sweet potato fritters, cucumber, red onion, fresh greens and tzaziki sauce in a warm pita</td>
+		    <td>$6.95</td>
+		    <td align="center"><input id="08a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="08aa" type="number" min="0"/></td>
+		    		
+	    </tr>
+		
+		<tr>
+		    <td><img src="Sweet Potato Black Bean.jpg" align="center" height="80" width="100"/></td>
+		    <td>SWEET POTATO BLACK BEAN BURGER</td>
+		    <td>house-made sweet potato black bean burger on a pretzel bun with fresh greens, red onion and chipotle sauce</td>
+		    <td>$6.95</td>
+		    <td align="center"><input id="09a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="09aa" type="number" min="0"/></td>
+		    		
+	    </tr>
+		  
+		<tr>
+		    <td><img src="Buffalo Blue Burger.jpg" align="center" height="68" width="116"/></td>
+		    <td>BUFFALO BLUE BURGER</td>
+		    <td>house-made sweet potato black bean burg-er on a pretzel bun with fresh greens, red onion, spicy buffalo sauce and creamy ranch</td>
+		    <td>$6.95</td>
+		    <td align="center"><input id="10a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="10aa" type="number" min="0"/></td>
+		    		
+	    </tr>
+		
+		<tr>
+		    <td><img src="Buffalo Cauliflower Wrap.jpg" align="center" height="68" width="116"/></td>
+		    <td>BUFFALO CAULIFLOWER WRAP</td>
+		    <td>house-made crispy cauliflower bites on a whole wheat tortilla with greens, shredded carrot, red onion, cucumber, smothered in spicy buffalo sauce and creamy ranch</td>
+		    <td>$7.95</td>
+		    <td align="center"><input id="11a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="11aa" type="number" min="0"/></td>
+		    		
+	    </tr>
+		
+		<tr>
+		    <td><img src="Portobello Gyro.jpg" align="center" height="68" width="116"/></td>
+		    <td>PORTOBELLO GYRO</td>
+		    <td>marinated and grilled slices of portobello mushroom with fresh avocado, greens, cucumber slices, red onion and house-made tzaziki sauce in a grilled pita</td>
+		    <td>$8.95</td>
+		    <td align="center"><input id="12a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="12aa" type="number" min="0"/></td>
+		    		
+	    </tr>
+		
+		<tr> min="0"
+		    <td><img src="Thai Crunch Wrap.jpg" align="center" height="68" width="116"/></td>
+		    <td>THAI CRUNCH WRAP</td>
+		    <td>shredded kale, organic marinated tofu, shredded carrot, red cabbage, cucumber, green onion, red pepper, radish, crushed peanuts, mint, basil and house-made Thai peanut dressing in a whole wheat wrap (add avocado for $1 more)</td>
+		    <td>$8.95</td>
+		    <td align="center"><input id="13a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="13aa" type="number" min="0"/></td>
+		    		
+	    </tr>
+		
+		<tr>
+		    <td><img src="Kimchi Crunch Wrap.jpg" align="center" height="68" width="116"/></td>
+		    <td>KIMCHI CRUNCH WRAP</td>
+		    <td>white rice, five spice marinated jackfruit, house-made kimchi, spicy mayo, cilantro and scallions wrapped in a whole wheat tortilla and grilled to golden brown </td>
+		    <td>$9.95</td>
+		    <td align="center"><input id="14a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="14aa" type="number" min="0"/></td>
+		    		
+	    </tr>
+	
+	</table>
+	
+	<br><br><br>
+
+    <table class="tacos" border="1" cellspacing="10" cellpadding="10" align="center">
+	<h2 align="center">Tacos & Burritos</h2>
+	
+	<th>Photo</th>
+        <th>Dish</th>		
+        <th width="400">Description</th>
+        <th>Price</th>
+        <th>Selector</th>
+        <th>Number</th>
+		
+	<tr>
+		    <td><img src="Lulu's Tacos.jpg" align="center" height="68" width="116"/></td>
+		    <td>LULU'S TACOS</td>
+		    <td>roasted smoky sweet potato, mushroom and onions with black beans, fresh avocado and cilantro with house-made spicy chipotle sauce on white corn tortillas</td>
+		    <td>$7.95</td>
+		    <td align="center"><input id="15a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="15aa" type="number" min="0"/></td>
+		    
+	    </tr>
+		
+        <tr>
+		    <td><img src="Banh Mi Tacos.jpg" align="center" height="68" width="116"/></td>
+		    <td>BANH MI TACOS</td>
+		    <td>five spice marinated jackfruit with shredded carrot, cucumber, onion, cilantro, lime, radish, mayo and house-made vietnamese banh mi sauce on white corn tortillas</td>
+		    <td>$7.95</td>
+		    <td align="center"><input id="16a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="16aa" type="number" min="0" /></td>
+		    	
+	    </tr>
+		
+		<tr>
+		    <td><img src="Banh Mi Burrito.jpg" align="center" height="80" width="100"/></td>
+		    <td>BANH MI BURRITO</td>
+		    <td>five spice marinated jackfruit with fresh greens, shredded carrot, cucumber, onion, cilantro, fresh avocado, radish, mayo and house-made vietnamese banh mi sauce wrapped in a whole wheat tortilla</td>
+		    <td>$8.95</td>
+		    <td align="center"><input id="17a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="17aa" type="number" min="0"/></td>
+		    
+	    </tr>
+		  
+		<tr>
+		    <td><img src="Chiplote Black Bean Burrito.jpg" align="center" height="68" width="116"/></td>
+		    <td>CHIPLOTE BLACK BEAN BURRITO</td>
+		    <td>roasted sweet potato, mushroom and onion with smoked white bean hummus, brown rice, black beans, shredded kale and fresh avocado with house-made chipotle sauce wrapped in a whole wheat tortilla</td>
+		    <td>$8.95</td>
+		    <td align="center"><input id="18a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="18aa" type="number" min="0"/></td>
+		    
+	    </tr>
+		
+		<tr>
+		    <td><img src="BBQ Jack Tacos.jpg" align="center" height="68" width="116"/></td>
+		    <td>BBQ JACK TACOS</td>
+		    <td>slow smoked jackfruit smothered in Pappy’s Original BBQ Sauce topped with house-made slaw on white corn tortillas</td>
+		    <td>$7.95</td>
+		    <td align="center"><input id="19a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="19aa" type="number" min="0"/></td>
+		   
+	    </tr>
+		
+		<tr>
+		    <td><img src="Spring Roll Burrito.jpg" align="center" height="68" width="116"/></td>
+		    <td>SPRING ROLL BURRITO</td>
+		    <td>house-made crispy cauliflower bites with fresh greens, cucumber, shredded carrot, green onion, cilantro, crushed peanuts, fresh avocado, basil and mint with our house-made peanut sauce wrapped in a whole wheat tortilla</td>
+		    <td>$8.95</td>
+		    <td align="center"><input id="20a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="20aa" type="number" min="0"/></td>
+		   
+	    </tr>	
+		
+   </table>
+   
+   <br><br><br>
+	
+	<table class="entree" border="1" cellspacing="10" cellpadding="10" align="center">
+	<h2 align="center">Entree Bowls</h2>
+        <th>Photo</th>
+        <th>Dish</th>		
+        <th width="400">Description</th>
+        <th>Price</th>
+        <th>Selector</th>
+        <th>Number</th>
+	
+	<tr>
+		    <td><img src="Buddha's Bowl.jpg" align="center" height="68" width="116"/></td>
+		    <td>BUDDHA'S BOWL</td>
+		    <td>udon noodles, organic marinated tofu, stir fried vegetables, crushed peanuts, green onion, cilantro, lime, sesame seeds, basil and mint with house-made peanut sauce</td>
+		    <td>$9.95</td>
+		    <td align="center"><input id="21a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="21aa" type="number"/></td>
+			
+	    </tr min="0"
+		
+        <tr>
+		    <td><img src="Banh Mi Bowl.jpg" align="center" height="68" width="116"/></td>
+		    <td>BANH MI BOWL</td>
+		    <td>five spice marinated jackfruit with fresh greens, brown rice, cucumber, shredded carrot, onion, radish, cilantro, fresh avocado, mayo and house-made vietnamese banh mi sauce</td>
+		    <td>$9.95</td>
+		    <td align="center"><input id="22a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="22aa" type="number" min="0"/></td>
+			
+	    </tr>
+		
+		  
+		<tr>
+		    <td><img src="Spring Roll Bowl.jpg" align="center" height="68" width="116"/></td>
+		    <td>SPRING ROLL BOWL</td>
+		    <td>house-made crispy cauliflower bites over fresh greens, brown rice, cucumber, shredded carrot, green onion, cilantro, crushed peanuts, fresh avocado, lime, basil and mint with our house-made peanut sauce</td>
+		    <td>$9.95</td>
+		    <td align="center"><input id="23a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="23aa" type="number" min="0"/></td>
+		  
+	    </tr>
+		
+		<tr>
+		    <td><img src="Chiplote Black Bean Bowl.jpg" align="center" height="68" width="116"/></td>
+		    <td>CHIPLOTE BLACK BEAN BOWL</td>
+		    <td>roasted sweet potato, mushroom and onion over shredded kale, brown rice, black beans topped with smoked jack-fruit, bbq sauce, spicy chipotle sauce, fresh avocado cilantro and green onion</td>
+		    <td>$9.95</td>
+		    <td align="center"><input id="24a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="24aa" type="number" min="0"/></td>
+				
+	    </tr>
+		
+		<tr>
+		    <td><img src="Sushi Bowl.jpg" align="center" height="68" width="116"/></td>
+		    <td>SUSHI BOWL</td>
+		    <td>sushi rice, watermelon sashimi, avocado, cucumber, radish, scallions, pickled ginger and our house made spicy mayo served with a side of wasabi</td>
+		    <td>$9.95</td>
+		    <td align="center"><input id="25a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="25aa" type="number"/></td>
+			
+	    </tr>
+	 min="0"
+	</table>
+	
+	<b><br><br>
+	
+	<table class="kids" border="1" cellspacing="10" cellpadding="10" align="center">
+	<h2 align="center">Kids Menu</h2>
+        <th>Photo</th>
+        <th>Dish</th>		
+        <th>Price</th>
+        <th>Selector</th>
+        <th>Number</th>
+	
+	<tr>
+		    <td><img src="Cauliflower Nuggets.jpg" align="center" height="68" width="116"/></td>
+		    <td>CAULIFLOWER NUGGETS</td>
+		    <td>$4.95</td>
+		    <td align="center"><input id="26a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="26aa" type="number" min="0"/></td>
+		   
+	    </tr>
+		
+        <tr>
+		    <td><img src="Kid's Taco.jpg" align="center" height="68" width="116"/></td>
+		    <td>KID'S TACO(1)</td>		    
+		    <td>$9.95</td>
+		    <td align="center"><input id="27a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="27aa" type="number"/min="0"></td>
+		   
+	    </tr>
+		
+		  
+		<tr>
+		    <td><img src="Mini Burger.jpg" align="center" height="68" width="116"/></td>
+		    <td>MINI BURGER(1)</td>
+		    <td>$3.95</td>
+		    <td align="center"><input id="28a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="28aa" type="number" min="0"/></td>
+			
+	    </tr>
+		
+		<tr>
+		    <td><img src="BBQ Slider.jpg" align="center" height="68" width="116"/></td>
+		    <td>BBQ SLIDER(1)</td>
+			<td>$3.95</td>
+		    <td align="center"><input id="29a" type="checkbox" name="dish"</td>
+		    <td align="center"><input id="29aa" type="number" min="0" min="0"/></td>
+			
+	    </tr>
+		
+		
+	</table>	
+		
+<br><br><br>
+		
+<p align="center"><button style="background-color: green; border: 2px solid; color:white; padding: 15px 32px; display: inline-block;" type="button" onclick="ProcessingOrder()"><font size="30">Proceed to Shopping Cart</font></button></p>
+	
+	</div>
+		
+      </main> 
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+	  
+</body>
+
+<footer>
+  <br>3201 S Grand Ave St. Louis, MO 63118  &nbsp;&nbsp;  //  &nbsp;&nbsp;    
+314-300-8215 &nbsp;&nbsp; // &nbsp;&nbsp;  Monday - Saturday 11:30am-9pm
+
+</footer>
+	
+
+<script>
+
+// Array containing all the dishes in Lala's menu page .Spring 2019
+var dishes = ["01a","BUFFALO CAULIFLOWER BITES","6.95","02a","KALE SALAD","6.95","03a","TATER TOTS","3.95","04a","SMOKED WHITE BEAN HUMMUS","6.95","05a","THAI CRUNCHED SALAD","8.95",
+"06a","POKE LETTUCE WRAPS","9.95","07a","THE BBQ JACK", "7.95", "08a","SWEET POTATO FALAFEL", "6.95", "09a","SWEET POTATO BLACK BEAN BURGER","6.95","10a","BUFFALO BLUE BURGER","6.95",
+ "11a","BUFFALO CAULIFLOWER WRAP","7.95", "12a","PORTOBELLO GYRO","8.95","13a","THAI CRUNCH WRAP","8.95", "14a", "KIMCHI CRUNCH WRAP","9.95","15a","LULU'S TACOS","7.95", "16a","BANH MI TACOS","7.95",
+ "17a","BANH MI BURRITO","8.95","18a","CHIPLOTE BLACK BEAN BURRITO","8.95","19a","BBQ JACK TACOS","7.95","20a","SPRING ROLL BURRITO","8.95", "21a","BUDDHA'S BOWL","9.95",
+ "22a","BANH MI BOWL","9.95", "23a","SPRING ROLL BOWL","9.95", "24a","CHIPLOTE BLACK BEAN BOWL","9.95","25a","SUSHI BOWL","9.95","26a","CAULIFLOWER NUGGETS","4.95",
+"27a","KID'S TACO","9.95","28a","MINI BURGER","3.95","29a","BBQ SLIDER","3.95"];
+
+
+function ProcessingOrder()  
+{  
+    var total = 0;
+
+    var boxes = []; // This array stores the id's of the checkboxes that have been checked. KEY DATA
+	
+	var nPortions = []; //This array stores the IDs of the selected number fields on the form.
+	
+	var quantity = []; // This array will store the number of portions that have been ordered per dish. kEY DATA
+	
+	var orderD = []; // This array contains the data of the customer's order: Name of the Dish. 
+	var orderP = []; // This array contains the data of the customer's complete order: Price of the Dish. 
+	var orderQ = []; // This array contains the data of the customer's complete order: Number of Portions. 
+	var orderS = []; // This array contains the data of the customer's complete order: Subtotal.
+	
+    var checkboxes = document.getElementsByName("dish");  // This array stores all the elements that have the same given name.
+    var numberOfCheckedItems = 0; // This variable is used to count the checkboxes that have been checked. 
+	var idCode = ""; // This variable is used to store the code of the number fields.
+	var subtotal = 0;
+	// var total = 0;
+	
+    for(var i = 0; i < checkboxes.length; i++)  // Process to get the IDs of all the checked boxes.
+    {  
+        if(checkboxes[i].checked)  
+            { 
+			
+			numberOfCheckedItems++;
+            boxes.push(checkboxes[i].id);
+			} 
+    }
+	
+	//document.getElementById("demo1").innerHTML = numberOfCheckedItems;
+    // document.getElementById("demo2").innerHTML = boxes; 
+	
+	
+	
+	
+	
+	for(var j = 0; j < numberOfCheckedItems; j++) { // This loop creates the corresponding IDs of the number fields and stores them in quantity
+	   nPortions[j] = boxes[j] + "a";	   
+	  
+    } 
+	  
+	//document.getElementById("demo4").innerHTML = nPortions; 
+	
+	//number = document.getElementById(nPortions[1]).value;
+	
+	//document.getElementById("demo5").innerHTML = number;
+
+    for(var k = 0; k < numberOfCheckedItems; k++) {
+	    quantity[k] = document.getElementById(nPortions[k]).value;	
+	}
+
+    // document.getElementById("demo6").innerHTML = quantity;	
+	
+	for (var l = 0; l < numberOfCheckedItems; l++) { // Creates an array of the names of the dishes that have been selected by the customer.
+	    for (var m = 0; m < dishes.length; m++) {		
+		    if(boxes[l] === dishes[m]) {		
+		       orderD[l] = dishes[m+1];		
+		    }
+	    }
+	}
+	
+	// document.getElementById("demo7").innerHTML = orderD;	
+	
+	for (var l = 0; l < numberOfCheckedItems; l++) {
+	    for (var m = 0; m < dishes.length; m++) {		
+		    if(boxes[l] === dishes[m]) {		
+		        orderP[l] = Number(dishes[m+2]); // Converts the prices in dishes to numbers and stores them in an array of prices.	
+		    }
+	    }
+	}
+	
+	//document.getElementById("demo8").innerHTML = orderP;	
+	
+	for (var l = 0; l < numberOfCheckedItems; l++) { // Converts the text in the quantity array to integers.			
+		    orderQ[l] = Number(quantity[l]);		
+	}
+	
+	//document.getElementById("demo9").innerHTML = orderQ;	
+	
+	for (var l = 0; l < numberOfCheckedItems; l++) { // This is an array that contains the amount per dish.
+		orderS[l] = orderP[l] * orderQ[l];
+		subtotal+= orderS[l]; // This is the total amount before taxes.
+	}
+	
+	//document.getElementById("demo10").innerHTML = orderS;	
+	
+	total = subtotal + (subtotal * 0.085); // This is the total including taxes;
+	
+	//document.getElementById("demo11").innerHTML = total;
+
+
+document.write("<body background=\"confirmation.jpg\">");
+
+document.write("<h1 style=\"text-align:center;font-family: Script, Helvetica, sans-serif; font-size: 100px; color: navy;\"><img src=\"logo.png\" align=\"left-side\" height=\"92\" width=\"84\"/> Lulu's Local Eatery</h1>");
+document.write("<h1 style=\"text-align:center; font-size:50px; color: yellow;\">Your Order<h1>");
+document.write("<table border=\"1\" align = \"center\" cellpadding=\"10px\" style=\"font-size: 25px; color: white; background-color: black;\">");
+document.write("<th>Name of the Dish</th><th>Price</th><th>Qty.</th><th>Subtotal</th>");
+
+    for(var i = 0; i < numberOfCheckedItems; i++) {
+	document.write("<tr><td>");
+	document.write(orderD[i]);
+	document.write("</td><td align=\"right\">$");
+	document.write(orderP[i]);
+	document.write("</td><td align=\"center\">");
+	document.write(orderQ[i]);
+	document.write("</td><td align=\"right\">$");
+	document.write(orderS[i].toFixed(2));
+	document.write("</td></tr>");
+	
+     
+    }
+
+
+document.write("</table>");
+document.write("<br>");
+document.write("<table border=\"1\" align = \"center\" cellpadding=\"10px\" style=\"font-size: 25px; color: black; background-color: yellow;\">");
+document.write("<tr><td align=\"right\";>Subtotal:  $");
+document.write(subtotal.toFixed(2));
+document.write("</td><td width=\"40px\"><button style=\"background-color: #4CAF50\" onclick=\"history.go(0)\"><b>EDIT YOUR ORDER</b></button>");
+document.write("</td><td width=\"40px\"><button style=\"background-color: #008CBA\" onclick=\"window.location.href = 'home v.3.html';\"><b>HOME PAGE</b></button>");
+document.write("</td></tr>"); 
+document.write("<tr><td>ORDER TOTAL ( + 8.5% tax):  $");
+document.write(total.toFixed(2));
+document.write("</td><td colspan=\"2\"><button style=\"background-color: #f44336\" onclick=\"window.location.href = 'paying.html';\"><b>PAY FOR YOUR ORDER</b></button>");
+document.write("</td></tr>");
+document.write("</table>");
+
+
+
+
+
+document.write("</body>");
+
+
+localStorage.setItem("nItems", numberOfCheckedItems);
+localStorage.setItem("sTotal", subtotal.toFixed(2));
+localStorage.setItem("money", total.toFixed(2));
+localStorage.setItem("dishes", JSON.stringify(orderD));
+localStorage.setItem("prices", JSON.stringify(orderP));
+localStorage.setItem("quantity", JSON.stringify(orderQ));
+localStorage.setItem("subtotals", JSON.stringify(orderS));
+
+
+}
+</script>
+
+	
+	
+</html>	
+	
+	
+
+	
+	
+	
